@@ -176,18 +176,23 @@ const name =document.querySelector("#name")
 const btn=document.querySelector(".btn")
 const list=document.querySelector(".list")
 btn.addEventListener('click',()=>{
-    const li=document.createElement ('li')
-    const dlt=document.craeteElement('button')
-    dlt.innerText="delete"
-    li.innerText=name.value;
-    dlt.addEventListener("Click",()=>{
-        list.removeChild(li)
-    })
-    li.appendChild(dlt)
-    list.appendChild(li)
+    if (name.value===""){
+        alert("Enter the name!!")
+        return;
+    }
+   const li=document.createElement ('li')
+   const dlt=document.craeteElement('button')
+   dlt.innerText="delete"
+   li.innerText=name.value;
+   dlt.addEventListener("Click",()=>{
+           list.removeChild(li)
+        })
+  list.appendChild(li)
+  li.appendChild(dlt)
     
-    name.value=""
-})
+  name.value=""
+    })
+
 
 
 
