@@ -150,8 +150,47 @@
 // }
 // calculate() 
 
-console.log("First line")
-setTimeout(()=>(console.log("after 5 secs")),2000)
-console.log("second line")
-console.log("second line")
-console.log("second line")
+// console.log("First line")
+// setTimeout(()=>(console.log("after 5 secs")),5000)
+// console.log("second line")
+// console.log("second line")
+// console.log("third line")
+// console.log("fourth line")
+
+// setTimeout(()=>{
+//     console.log("After 3 secs")},2*1000)
+// const time=setInterval(() => {console.log("Set interval")    
+// }, 1000)
+
+// setInterval(()=>{clearInterval(time)},10000)
+
+// num=1
+
+// const id=setInterval(()=>{
+//     if (num===10)clearInterval(id)
+//     console.log(num)
+//     num+=1
+// },1000)
+
+const name =document.querySelector("#name")
+const btn=document.querySelector(".btn")
+const list=document.querySelector(".list")
+btn.addEventListener('click',()=>{
+    const li=document.createElement ('li')
+    const dlt=document.craeteElement('button')
+    dlt.innerText="delete"
+    li.innerText=name.value;
+    dlt.addEventListener("Click",()=>{
+        list.removeChild(li)
+    })
+    li.appendChild(dlt)
+    list.appendChild(li)
+    
+    name.value=""
+})
+
+
+
+
+
+
