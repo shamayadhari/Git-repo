@@ -172,29 +172,41 @@
 //     num+=1
 // },1000)
 
-const name =document.querySelector("#name")
-const btn=document.querySelector(".btn")
-const list=document.querySelector(".list")
-btn.addEventListener('click',()=>{
-    if (name.value===""){
-        alert("Enter the name!!")
-        return;
-    }
-   const li=document.createElement ('li')
-   const dlt=document.craeteElement('button')
-   dlt.innerText="delete"
-   li.innerText=name.value;
-   dlt.addEventListener("Click",()=>{
-           list.removeChild(li)
-        })
-  list.appendChild(li)
-  li.appendChild(dlt)
+// const name =document.querySelector("#name")
+// const btn=document.querySelector(".btn")
+// const list=document.querySelector(".list")
+// btn.addEventListener('click',()=>{
+//     if (name.value===""){
+//         alert("Enter the name!!")
+//         return;
+//     }
+//    const li=document.createElement ('li')
+//    const dlt=document.craeteElement('button')
+//    dlt.innerText="delete"
+//    li.innerText=name.value;
+//    dlt.addEventListener("Click",()=>{
+//            list.removeChild(li)
+//         })
+//   list.appendChild(li)
+//   li.appendChild(dlt)
     
-  name.value=""
-    })
+//   name.value=""
+//     })
 
+// console.log("First line")
+// setTimeout(()=>(console.log("after 2 secs")),2000)
+// console.log("second line")
 
+function print(num){setTimeout(()=>{
+    console.log("insdie text")
+    num()},2000)
+}
 
+function callback(){ //callback fn
+    console.log("Inside call")
+}
+
+print(callback)
 
 
 
