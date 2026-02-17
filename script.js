@@ -197,17 +197,105 @@
 // setTimeout(()=>(console.log("after 2 secs")),2000)
 // console.log("second line")
 
-function print(num){setTimeout(()=>{
-    console.log("insdie text")
-    num()},2000)
+// function print(num){setTimeout(()=>{
+//     console.log("insdie text")
+//     num()},2000)
+// }
+
+// function callback(){ //callback fn
+//     console.log("Inside call")
+// }
+
+// print(callback)
+
+//Call back hell
+// console.log("starting homework...")
+// setTimeout(()=>{
+//     console.log("homework done")
+//     console.log("starting dinner")
+//     setTimeout(()=>{
+//         console.log("dinner done..")
+//         console.log("getting ready to go out....")
+//         setTimeout(()=>{
+//             console.log("going to the playground")
+//         },1000) //after dinner
+        
+//     },1500) //dinner time 
+// },2000) //homework time 
+
+// function finishHomework(callback) {
+//     console.log("Starting homework..")
+//     setTimeout(()=>{
+//         console.log("Homework done!!")
+//         callback()
+//     },2000)
+// }
+
+// function eatDinner(callback) {
+//     console.log("Starting dinner...")
+//     setTimeout(() => {
+//        console.log("Dinner done!")
+//        callback() 
+//     },1500)
+// }
+
+// function goToPlayground(){
+//     console.log("Going to the playground")
+// }
+
+// finishHomework(()=>{
+//     eatDinner(()=>{
+//         goToPlayground()
+//     })
+// })
+
+
+// const p=new Promise((resolve,reject)=>{
+//     let done=true
+//     setTimeout(() => {
+//         if(done){
+//             resolve({name:"Anand",age:23})
+//         }else{
+//             reject("Not done")
+//         }
+//     },2000);
+// })
+// // console.log(p)
+// p.then((data)=>{
+//     console.log(data.name)
+//     console.log(data.age)
+// }).catch((err)=>{
+//     console,log(err)
+// }).finally(()=>{
+//     console.log("blockedddddd")
+// })
+
+// function doHomework(){
+//     const p=new Promise((res,rej)=>{
+//         let done=true;
+//         setTimeout(()=>{
+//             if (done){
+//                 console.log("Homework completed")
+//                 res("Homework done")
+//             }else{
+//                 rej("homewrok not completed")
+//             }
+//         },2000)
+//     })
+//     return p
+// }
+
+// function eatDinner(){}
+
+console.log("First line")
+try{
+    let age=16
+    if(age<18){
+        throw new Error ("You are minor")
+    }
+    // console.log(sample)
+}catch(err){
+    console.log(err)
+    console.log("We got error")
 }
-
-function callback(){ //callback fn
-    console.log("Inside call")
-}
-
-print(callback)
-
-
-
-
+console.log("Last line")
