@@ -287,15 +287,46 @@
 
 // function eatDinner(){}
 
-console.log("First line")
-try{
-    let age=16
-    if(age<18){
-        throw new Error ("You are minor")
+// console.log("First line")
+// try{
+//     let age=16
+//     if(age<18){
+//         throw new Error ("You are minor")
+//     }
+//     // console.log(sample)
+// }catch(err){
+//     console.log(err)
+//     console.log("We got error")
+// }
+// console.log("Last line")
+
+// function generate(){
+//     for (let index = 1; index <=4; index++) {
+//         yield index 
+//     }
+// }
+//  const gen=generate()
+//  console.log(gen)
+//  console.log(gen.next())
+//  console.log(gen.next())
+//  console.log(gen.next())
+//  console.log(gen.next())
+
+ function add(a){
+    return function(b){
+        return function(c){
+            return a+b+c
+        }
     }
-    // console.log(sample)
-}catch(err){
-    console.log(err)
-    console.log("We got error")
-}
-console.log("Last line")
+ }
+
+ const first =add(1)
+ console.log(first)
+ const second=first(2)
+ console.log(second)
+ const third=second(3)
+ console.log(third)
+
+ console.log(add(1)(2)(3))
+ 
+ 
